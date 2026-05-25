@@ -10,9 +10,8 @@ import SwiftData
 
 struct CategoryFilterView: View {
     @State var activeCategory: Categories
-    
+
     @Query(sort: \Grocery.expirationDate) var groceries: [Grocery]
-    @Environment(\.modelContext) private var context
     
     var filtered: [Grocery] {
         groceries.filter{$0.category == activeCategory}
