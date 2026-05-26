@@ -15,6 +15,6 @@ struct ShelfLifeApp: App {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(for: Grocery.self, inMemory: true)
+        .modelContainer(for: Grocery.self)
     }
 }
